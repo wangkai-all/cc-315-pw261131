@@ -1,0 +1,786 @@
+{
+  "id": "bt-afb146ab5a7b",
+  "createdAt": "2026-11-16T04:43:50.098Z",
+  "versions": {
+    "demand": "dem-802e497833",
+    "network": "net-cc72741827",
+    "stores": "str-e9de0829b7",
+    "candidates": "cnd-3ad738d1a1",
+    "history": "hist-852b780696",
+    "model": "mdl-83cec2fccf",
+    "code": "huff-capacity-v1"
+  },
+  "inputVersionKey": "3b8373d9efa830b0",
+  "protocol": {
+    "trainEnd": 12,
+    "testStart": 13,
+    "testEnd": 24,
+    "folds": 5,
+    "purgePeriods": 1,
+    "bufferM": 900,
+    "betaGrid": [
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.07,
+      0.08,
+      0.09,
+      0.1,
+      0.12,
+      0.14,
+      0.16,
+      0.18,
+      0.2
+    ],
+    "alphaGrid": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1.1
+    ],
+    "naiveSplitSeed": 424242,
+    "naiveTrainShare": 0.8,
+    "description": "空间分块 5 折 + 时间外推（拟合 1–11 期，评分 13–24 期），训练点剔除验证点 900 米内邻居，并丢弃边界期以隔离序列相关。",
+    "foldsDetail": [
+      {
+        "fold": 0,
+        "heldPointCount": 17,
+        "trainPointCount": 65,
+        "embargoedPoints": 8,
+        "trainCells": 1540,
+        "testCells": 548,
+        "beta": 0.08,
+        "alpha": 1.1,
+        "wape": 0.1413
+      },
+      {
+        "fold": 1,
+        "heldPointCount": 18,
+        "trainPointCount": 65,
+        "embargoedPoints": 7,
+        "trainCells": 1705,
+        "testCells": 421,
+        "beta": 0.08,
+        "alpha": 1.1,
+        "wape": 0.1397
+      },
+      {
+        "fold": 2,
+        "heldPointCount": 19,
+        "trainPointCount": 66,
+        "embargoedPoints": 5,
+        "trainCells": 1859,
+        "testCells": 559,
+        "beta": 0.06,
+        "alpha": 1.1,
+        "wape": 0.1333
+      },
+      {
+        "fold": 3,
+        "heldPointCount": 22,
+        "trainPointCount": 61,
+        "embargoedPoints": 7,
+        "trainCells": 1353,
+        "testCells": 723,
+        "beta": 0.07,
+        "alpha": 1.1,
+        "wape": 0.1407
+      },
+      {
+        "fold": 4,
+        "heldPointCount": 14,
+        "trainPointCount": 68,
+        "embargoedPoints": 8,
+        "trainCells": 1793,
+        "testCells": 372,
+        "beta": 0.07,
+        "alpha": 1.1,
+        "wape": 0.1096
+      }
+    ]
+  },
+  "metrics": {
+    "n": 2623,
+    "wape": 0.135,
+    "mae": 21.49,
+    "rmse": 31.66,
+    "bias": -0.024,
+    "observedVisits": 417575,
+    "predictedVisits": 407542
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "heldPointIds": [
+        "d-029",
+        "d-030",
+        "d-043",
+        "d-044",
+        "d-045",
+        "d-046",
+        "d-047",
+        "d-048",
+        "d-053",
+        "d-054",
+        "d-055",
+        "d-056",
+        "d-063",
+        "d-064",
+        "d-065",
+        "d-066",
+        "d-078"
+      ],
+      "heldPointCount": 17,
+      "trainPointCount": 65,
+      "embargoedPoints": [
+        "d-031",
+        "d-032",
+        "d-033",
+        "d-034",
+        "d-057",
+        "d-058",
+        "d-077",
+        "d-080"
+      ],
+      "trainCells": 1540,
+      "testCells": 548,
+      "periodRange": {
+        "train": [
+          1,
+          11
+        ],
+        "test": [
+          13,
+          24
+        ]
+      },
+      "fit": {
+        "beta": 0.08,
+        "alpha": 1.1,
+        "trainWape": 0.1338,
+        "storeAppeal": {
+          "s-01": 1.057,
+          "s-02": 1.035,
+          "s-03": 0.954,
+          "s-04": 1.029,
+          "s-05": 1
+        },
+        "monthFactors": {
+          "1": 0.9649,
+          "2": 0.9037,
+          "3": 0.9499,
+          "4": 0.9756,
+          "5": 1.0223,
+          "6": 1.0379,
+          "7": 1.0602,
+          "8": 1.0238,
+          "9": 0.9853,
+          "10": 0.9949,
+          "12": 1.0815
+        },
+        "trainPeriods": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "trainCells": 1540,
+        "trainPoints": 61
+      },
+      "metrics": {
+        "n": 548,
+        "wape": 0.1413,
+        "mae": 19.95,
+        "rmse": 32.43,
+        "bias": -0.0399,
+        "observedVisits": 77377,
+        "predictedVisits": 74292
+      },
+      "capacitySubset": {
+        "bindingStoreIds": [
+          "s-01",
+          "s-02",
+          "s-04",
+          "s-05"
+        ],
+        "capacityCells": 344,
+        "capacityMetrics": {
+          "n": 344,
+          "wape": 0.1664,
+          "mae": 18.08,
+          "rmse": 30.13,
+          "bias": -0.0486,
+          "observedVisits": 37370,
+          "predictedVisits": 35553
+        },
+        "nonCapacityMetrics": {
+          "n": 204,
+          "wape": 0.1178,
+          "mae": 23.09,
+          "rmse": 35.97,
+          "bias": -0.0317,
+          "observedVisits": 40007,
+          "predictedVisits": 38739
+        },
+        "note": "按观测到访是否逼近容量上限划分，用于说明容量约束对误差的影响。"
+      }
+    },
+    {
+      "fold": 1,
+      "heldPointIds": [
+        "d-009",
+        "d-010",
+        "d-011",
+        "d-012",
+        "d-013",
+        "d-014",
+        "d-023",
+        "d-024",
+        "d-025",
+        "d-026",
+        "d-027",
+        "d-028",
+        "d-037",
+        "d-038",
+        "d-039",
+        "d-040",
+        "d-041",
+        "d-042"
+      ],
+      "heldPointCount": 18,
+      "trainPointCount": 65,
+      "embargoedPoints": [
+        "d-007",
+        "d-008",
+        "d-021",
+        "d-035",
+        "d-036",
+        "d-049",
+        "d-052"
+      ],
+      "trainCells": 1705,
+      "testCells": 421,
+      "periodRange": {
+        "train": [
+          1,
+          11
+        ],
+        "test": [
+          13,
+          24
+        ]
+      },
+      "fit": {
+        "beta": 0.08,
+        "alpha": 1.1,
+        "trainWape": 0.1336,
+        "storeAppeal": {
+          "s-01": 1.038,
+          "s-02": 1.113,
+          "s-03": 0.953,
+          "s-04": 1.079,
+          "s-05": 1
+        },
+        "monthFactors": {
+          "1": 0.9612,
+          "2": 0.9082,
+          "3": 0.9485,
+          "4": 0.9815,
+          "5": 1.0181,
+          "6": 1.0337,
+          "7": 1.0553,
+          "8": 1.0271,
+          "9": 0.988,
+          "10": 0.9953,
+          "12": 1.0828
+        },
+        "trainPeriods": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "trainCells": 1705,
+        "trainPoints": 61
+      },
+      "metrics": {
+        "n": 421,
+        "wape": 0.1397,
+        "mae": 30.7,
+        "rmse": 41.49,
+        "bias": -0.0196,
+        "observedVisits": 92531,
+        "predictedVisits": 90717
+      },
+      "capacitySubset": {
+        "bindingStoreIds": [
+          "s-01",
+          "s-02",
+          "s-04",
+          "s-05"
+        ],
+        "capacityCells": 397,
+        "capacityMetrics": {
+          "n": 397,
+          "wape": 0.1422,
+          "mae": 31.79,
+          "rmse": 42.55,
+          "bias": -0.0172,
+          "observedVisits": 88760,
+          "predictedVisits": 87231
+        },
+        "nonCapacityMetrics": {
+          "n": 24,
+          "wape": 0.0802,
+          "mae": 12.6,
+          "rmse": 15.77,
+          "bias": -0.0754,
+          "observedVisits": 3771,
+          "predictedVisits": 3487
+        },
+        "note": "按观测到访是否逼近容量上限划分，用于说明容量约束对误差的影响。"
+      }
+    },
+    {
+      "fold": 2,
+      "heldPointIds": [
+        "d-049",
+        "d-050",
+        "d-051",
+        "d-052",
+        "d-059",
+        "d-060",
+        "d-061",
+        "d-062",
+        "d-071",
+        "d-072",
+        "d-073",
+        "d-074",
+        "d-075",
+        "d-076",
+        "d-086",
+        "d-087",
+        "d-088",
+        "d-089",
+        "d-090"
+      ],
+      "heldPointCount": 19,
+      "trainPointCount": 66,
+      "embargoedPoints": [
+        "d-039",
+        "d-041",
+        "d-069",
+        "d-070",
+        "d-085"
+      ],
+      "trainCells": 1859,
+      "testCells": 559,
+      "periodRange": {
+        "train": [
+          1,
+          11
+        ],
+        "test": [
+          13,
+          24
+        ]
+      },
+      "fit": {
+        "beta": 0.06,
+        "alpha": 1.1,
+        "trainWape": 0.131,
+        "storeAppeal": {
+          "s-01": 1.057,
+          "s-02": 1.044,
+          "s-03": 0.965,
+          "s-04": 1.106,
+          "s-05": 1
+        },
+        "monthFactors": {
+          "1": 0.9639,
+          "2": 0.9045,
+          "3": 0.9522,
+          "4": 0.9832,
+          "5": 1.0166,
+          "6": 1.0334,
+          "7": 1.0609,
+          "8": 1.0201,
+          "9": 0.9856,
+          "10": 0.9941,
+          "12": 1.0854
+        },
+        "trainPeriods": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "trainCells": 1859,
+        "trainPoints": 66
+      },
+      "metrics": {
+        "n": 559,
+        "wape": 0.1333,
+        "mae": 20.71,
+        "rmse": 28.98,
+        "bias": 0.0021,
+        "observedVisits": 86830,
+        "predictedVisits": 87011
+      },
+      "capacitySubset": {
+        "bindingStoreIds": [
+          "s-01",
+          "s-02",
+          "s-04",
+          "s-05"
+        ],
+        "capacityCells": 475,
+        "capacityMetrics": {
+          "n": 475,
+          "wape": 0.1297,
+          "mae": 21.16,
+          "rmse": 29.79,
+          "bias": -0.0027,
+          "observedVisits": 77491,
+          "predictedVisits": 77280
+        },
+        "nonCapacityMetrics": {
+          "n": 84,
+          "wape": 0.1636,
+          "mae": 18.19,
+          "rmse": 23.9,
+          "bias": 0.042,
+          "observedVisits": 9339,
+          "predictedVisits": 9731
+        },
+        "note": "按观测到访是否逼近容量上限划分，用于说明容量约束对误差的影响。"
+      }
+    },
+    {
+      "fold": 3,
+      "heldPointIds": [
+        "d-001",
+        "d-002",
+        "d-003",
+        "d-004",
+        "d-005",
+        "d-006",
+        "d-007",
+        "d-008",
+        "d-015",
+        "d-016",
+        "d-017",
+        "d-018",
+        "d-019",
+        "d-020",
+        "d-021",
+        "d-022",
+        "d-031",
+        "d-032",
+        "d-033",
+        "d-034",
+        "d-035",
+        "d-036"
+      ],
+      "heldPointCount": 22,
+      "trainPointCount": 61,
+      "embargoedPoints": [
+        "d-009",
+        "d-023",
+        "d-037",
+        "d-038",
+        "d-045",
+        "d-047",
+        "d-048"
+      ],
+      "trainCells": 1353,
+      "testCells": 723,
+      "periodRange": {
+        "train": [
+          1,
+          11
+        ],
+        "test": [
+          13,
+          24
+        ]
+      },
+      "fit": {
+        "beta": 0.07,
+        "alpha": 1.1,
+        "trainWape": 0.1377,
+        "storeAppeal": {
+          "s-01": 1.047,
+          "s-02": 1.035,
+          "s-03": 0.961,
+          "s-04": 1.055,
+          "s-05": 1
+        },
+        "monthFactors": {
+          "1": 0.9644,
+          "2": 0.9069,
+          "3": 0.9503,
+          "4": 0.9847,
+          "5": 1.0178,
+          "6": 1.031,
+          "7": 1.0626,
+          "8": 1.0255,
+          "9": 0.9852,
+          "10": 0.9946,
+          "12": 1.0772
+        },
+        "trainPeriods": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "trainCells": 1353,
+        "trainPoints": 57
+      },
+      "metrics": {
+        "n": 723,
+        "wape": 0.1407,
+        "mae": 20.7,
+        "rmse": 29.61,
+        "bias": -0.0506,
+        "observedVisits": 106355,
+        "predictedVisits": 100970
+      },
+      "capacitySubset": {
+        "bindingStoreIds": [
+          "s-01",
+          "s-02",
+          "s-04",
+          "s-05"
+        ],
+        "capacityCells": 531,
+        "capacityMetrics": {
+          "n": 531,
+          "wape": 0.1452,
+          "mae": 22.65,
+          "rmse": 32.32,
+          "bias": -0.0666,
+          "observedVisits": 82820,
+          "predictedVisits": 77305
+        },
+        "nonCapacityMetrics": {
+          "n": 192,
+          "wape": 0.125,
+          "mae": 15.32,
+          "rmse": 20.3,
+          "bias": 0.0055,
+          "observedVisits": 23535,
+          "predictedVisits": 23664
+        },
+        "note": "按观测到访是否逼近容量上限划分，用于说明容量约束对误差的影响。"
+      }
+    },
+    {
+      "fold": 4,
+      "heldPointIds": [
+        "d-057",
+        "d-058",
+        "d-067",
+        "d-068",
+        "d-069",
+        "d-070",
+        "d-077",
+        "d-079",
+        "d-080",
+        "d-081",
+        "d-082",
+        "d-083",
+        "d-084",
+        "d-085"
+      ],
+      "heldPointCount": 14,
+      "trainPointCount": 68,
+      "embargoedPoints": [
+        "d-048",
+        "d-055",
+        "d-056",
+        "d-063",
+        "d-071",
+        "d-072",
+        "d-078",
+        "d-086"
+      ],
+      "trainCells": 1793,
+      "testCells": 372,
+      "periodRange": {
+        "train": [
+          1,
+          11
+        ],
+        "test": [
+          13,
+          24
+        ]
+      },
+      "fit": {
+        "beta": 0.07,
+        "alpha": 1.1,
+        "trainWape": 0.1422,
+        "storeAppeal": {
+          "s-01": 1.055,
+          "s-02": 1.022,
+          "s-03": 0.949,
+          "s-04": 1.054,
+          "s-05": 1
+        },
+        "monthFactors": {
+          "1": 0.9628,
+          "2": 0.9069,
+          "3": 0.9516,
+          "4": 0.9796,
+          "5": 1.0238,
+          "6": 1.0351,
+          "7": 1.0591,
+          "8": 1.0228,
+          "9": 0.9855,
+          "10": 0.9911,
+          "12": 1.0817
+        },
+        "trainPeriods": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "trainCells": 1793,
+        "trainPoints": 64
+      },
+      "metrics": {
+        "n": 372,
+        "wape": 0.1096,
+        "mae": 16.05,
+        "rmse": 24.55,
+        "bias": 0.0013,
+        "observedVisits": 54482,
+        "predictedVisits": 54552
+      },
+      "capacitySubset": {
+        "bindingStoreIds": [
+          "s-01",
+          "s-02",
+          "s-04",
+          "s-05"
+        ],
+        "capacityCells": 216,
+        "capacityMetrics": {
+          "n": 216,
+          "wape": 0.1135,
+          "mae": 14.23,
+          "rmse": 20.17,
+          "bias": -0.0311,
+          "observedVisits": 27077,
+          "predictedVisits": 26235
+        },
+        "nonCapacityMetrics": {
+          "n": 156,
+          "wape": 0.1057,
+          "mae": 18.57,
+          "rmse": 29.57,
+          "bias": 0.0333,
+          "observedVisits": 27405,
+          "predictedVisits": 28317
+        },
+        "note": "按观测到访是否逼近容量上限划分，用于说明容量约束对误差的影响。"
+      }
+    }
+  ],
+  "leakageDiagnostic": {
+    "protocol": "random-cell-split (leaky diagnostic, not for selection)",
+    "trainShare": 0.8,
+    "fit": {
+      "beta": 0.07,
+      "alpha": 1.1,
+      "trainWape": 0.142,
+      "trainCells": 2014,
+      "testCells": 1075
+    },
+    "metrics": {
+      "n": 1075,
+      "wape": 0.1429,
+      "mae": 22.65,
+      "rmse": 34.07,
+      "bias": -0.0273,
+      "observedVisits": 170312,
+      "predictedVisits": 165665
+    },
+    "note": "同一需求点与相邻期的单元格同时出现在训练与测试中，因此误差通常偏乐观；不得用于选参或对外报告。"
+  },
+  "closureCheck": {
+    "storeId": "s-02",
+    "storeName": "澜川北店",
+    "closedPeriod": 18,
+    "affectedPointCount": 20,
+    "beforePeriod": 17,
+    "afterPeriods": [
+      18,
+      23
+    ],
+    "neighbour": {
+      "storeId": "s-05",
+      "distanceM": 430
+    },
+    "closedStoreVisitsBeforeClosure": 5377,
+    "otherStoresVisitsPerWeekBefore": 6858,
+    "otherStoresVisitsPerWeekAfter": 10346,
+    "transferShareOfClosedStore": 0.649,
+    "note": "关店后邻近需求点在其他门店的增量 / 该店关前到访；因容量与距离限制，转移比例通常小于 100%。"
+  },
+  "interpretation": [
+    "空间-时间隔离回测的 WAPE 为 13.5%，偏差 -2.4%。",
+    "随机单元格切分的 WAPE 为 14.3%，与隔离协议相差 0.8 个百分点。",
+    "随机切分允许同一需求点和相邻期同时进入训练与验证。本模型不含点位级参数，因此该泄漏在此合成数据上主要反映为误差估计不稳定，而不一定表现为明显更低的误差；无论数值如何，随机切分都不能作为泛化证据。",
+    "营业变更检验：澜川北店 关店后，邻近 20 个需求点在其他门店仅承接了其关前到访的 64.9%，并未全部转移。",
+    "回测分数只说明该合成过程下的内部一致性；正式选址必须用真实匿名交易/客流数据和经审计的路网。"
+  ],
+  "disclaimer": "回测在合成需求与虚构营业历史上进行；WAPE 说明模型在已知生成过程上的内部一致性，不能外推为真实收入或真实门店精度。"
+}

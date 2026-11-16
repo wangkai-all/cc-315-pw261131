@@ -1,0 +1,14 @@
+{
+  "createdAt": "2026-11-16T04:14:55.381Z",
+  "city": "云澜市",
+  "versions": {
+    "net": "net-cc72741827",
+    "dem": "dem-802e497833",
+    "str": "str-e9de0829b7",
+    "cnd": "cnd-3ad738d1a1",
+    "hist": "hist-852b780696",
+    "mdl": "mdl-83cec2fccf"
+  },
+  "currentPeriod": 24,
+  "note": "内容寻址的不可变输入快照；修改输入会生成新版本，旧方案保留原版本引用。"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "atlas-site-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline synthetic site-selection lab with network distances, cannibalization, spatial-temporal backtesting and versioned scenarios.",
+  "scripts": {
+    "seed": "node scripts/seed.js",
+    "backtest": "node scripts/backtest.js",
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

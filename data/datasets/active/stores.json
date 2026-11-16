@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "name": "云澜市现有门店与营业历史",
+    "unit": "visits/week",
+    "disclaimer": "门店、容量与营业历史均为虚构。容量为每周可服务到访人次上限。",
+    "periods": {
+      "count": 24,
+      "labels": [
+        "2024-12",
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10",
+        "2026-11"
+      ],
+      "current": 24,
+      "training": [
+        1,
+        12
+      ],
+      "validation": [
+        13,
+        24
+      ]
+    }
+  },
+  "stores": [
+    {
+      "id": "s-01",
+      "name": "云杉西林店",
+      "x": 1700,
+      "y": 1700,
+      "district": "nw",
+      "sizeSqm": 320,
+      "capacityVisitsPerWeek": 10500,
+      "appeal": 1.06,
+      "format": "街边标准店",
+      "openedPeriod": 1,
+      "closedPeriod": null,
+      "status": "open",
+      "note": "最早门店，承接北岸与西林交界需求。"
+    },
+    {
+      "id": "s-02",
+      "name": "澜川北店",
+      "x": 4250,
+      "y": 1700,
+      "district": "ne",
+      "sizeSqm": 250,
+      "capacityVisitsPerWeek": 9000,
+      "appeal": 0.92,
+      "format": "社区店",
+      "openedPeriod": 1,
+      "closedPeriod": 18,
+      "status": "closed",
+      "note": "第 19 期租约到期关闭，验证营业变更后的需求转移。"
+    },
+    {
+      "id": "s-03",
+      "name": "西林南店",
+      "x": 1700,
+      "y": 4250,
+      "district": "sw",
+      "sizeSqm": 380,
+      "capacityVisitsPerWeek": 11000,
+      "appeal": 1,
+      "format": "街边标准店",
+      "openedPeriod": 1,
+      "closedPeriod": null,
+      "status": "open",
+      "note": "西南主力店。"
+    },
+    {
+      "id": "s-04",
+      "name": "南塘公园店",
+      "x": 3400,
+      "y": 4250,
+      "district": "se",
+      "sizeSqm": 280,
+      "capacityVisitsPerWeek": 8000,
+      "appeal": 0.98,
+      "format": "公园店",
+      "openedPeriod": 1,
+      "closedPeriod": null,
+      "status": "open",
+      "note": "公园南缘，周末客流较高。"
+    },
+    {
+      "id": "s-05",
+      "name": "东港店",
+      "x": 5100,
+      "y": 4250,
+      "district": "ne",
+      "sizeSqm": 300,
+      "capacityVisitsPerWeek": 8200,
+      "appeal": 1.04,
+      "format": "街边标准店",
+      "openedPeriod": 13,
+      "closedPeriod": null,
+      "status": "open",
+      "note": "第 13 期新开，用于时间外推验证。"
+    }
+  ]
+}

@@ -1,0 +1,1533 @@
+{
+  "meta": {
+    "name": "云澜市",
+    "kind": "synthetic",
+    "crs": "local-enu-metres",
+    "origin": {
+      "lat": 31.2304,
+      "lon": 121.4737
+    },
+    "disclaimer": "虚构城市与路网，仅用于方法演示；所有行程时间为静态速度近似，未接入商业地图或实时路况。",
+    "createdAt": "2026-11-16T00:00:00.000Z",
+    "park": {
+      "x0": 2550,
+      "y0": 2550,
+      "x1": 4250,
+      "y1": 4250
+    },
+    "river": {
+      "x0": 4595,
+      "x1": 4755,
+      "y0": 0,
+      "y1": 5950,
+      "bridgeRows": [
+        1,
+        4,
+        7
+      ]
+    },
+    "notes": [
+      "中央公园移除内部路口，车辆需绕行公园边界。",
+      "澜川河仅在 1/4/7 行架桥，跨河出行需绕行至桥。",
+      "行程成本按路段限速计算，并附加每次转向 6 秒惩罚。"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "n-0-0",
+      "x": 0,
+      "y": 0,
+      "lat": 31.2304,
+      "lon": 121.4737,
+      "name": "北环路 × 西林路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-0-1",
+      "x": 850,
+      "y": 0,
+      "lat": 31.2304,
+      "lon": 121.48264,
+      "name": "北环路 × 松涛路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-0-2",
+      "x": 1700,
+      "y": 0,
+      "lat": 31.2304,
+      "lon": 121.491579,
+      "name": "北环路 × 白鹭街",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-0-3",
+      "x": 2550,
+      "y": 0,
+      "lat": 31.2304,
+      "lon": 121.500519,
+      "name": "北环路 × 云影路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-0-4",
+      "x": 3400,
+      "y": 0,
+      "lat": 31.2304,
+      "lon": 121.509459,
+      "name": "北环路 × 长宁路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-0-5",
+      "x": 4250,
+      "y": 0,
+      "lat": 31.2304,
+      "lon": 121.518398,
+      "name": "北环路 × 澜川大道",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-0-6",
+      "x": 5100,
+      "y": 0,
+      "lat": 31.2304,
+      "lon": 121.527338,
+      "name": "北环路 × 东港路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-0-7",
+      "x": 5950,
+      "y": 0,
+      "lat": 31.2304,
+      "lon": 121.536278,
+      "name": "北环路 × 临江路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-1-0",
+      "x": 0,
+      "y": 850,
+      "lat": 31.238044,
+      "lon": 121.4737,
+      "name": "云杉路 × 西林路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-1-1",
+      "x": 850,
+      "y": 850,
+      "lat": 31.238044,
+      "lon": 121.48264,
+      "name": "云杉路 × 松涛路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-1-2",
+      "x": 1700,
+      "y": 850,
+      "lat": 31.238044,
+      "lon": 121.491579,
+      "name": "云杉路 × 白鹭街",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-1-3",
+      "x": 2550,
+      "y": 850,
+      "lat": 31.238044,
+      "lon": 121.500519,
+      "name": "云杉路 × 云影路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-1-4",
+      "x": 3400,
+      "y": 850,
+      "lat": 31.238044,
+      "lon": 121.509459,
+      "name": "云杉路 × 长宁路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-1-5",
+      "x": 4250,
+      "y": 850,
+      "lat": 31.238044,
+      "lon": 121.518398,
+      "name": "云杉路 × 澜川大道",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-1-6",
+      "x": 5100,
+      "y": 850,
+      "lat": 31.238044,
+      "lon": 121.527338,
+      "name": "云杉路 × 东港路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-1-7",
+      "x": 5950,
+      "y": 850,
+      "lat": 31.238044,
+      "lon": 121.536278,
+      "name": "云杉路 × 临江路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-2-0",
+      "x": 0,
+      "y": 1700,
+      "lat": 31.245688,
+      "lon": 121.4737,
+      "name": "澜川大道 × 西林路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-2-1",
+      "x": 850,
+      "y": 1700,
+      "lat": 31.245688,
+      "lon": 121.48264,
+      "name": "澜川大道 × 松涛路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-2-2",
+      "x": 1700,
+      "y": 1700,
+      "lat": 31.245688,
+      "lon": 121.491579,
+      "name": "澜川大道 × 白鹭街",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-2-3",
+      "x": 2550,
+      "y": 1700,
+      "lat": 31.245688,
+      "lon": 121.500519,
+      "name": "澜川大道 × 云影路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-2-4",
+      "x": 3400,
+      "y": 1700,
+      "lat": 31.245688,
+      "lon": 121.509459,
+      "name": "澜川大道 × 长宁路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-2-5",
+      "x": 4250,
+      "y": 1700,
+      "lat": 31.245688,
+      "lon": 121.518398,
+      "name": "澜川大道 × 澜川大道",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-2-6",
+      "x": 5100,
+      "y": 1700,
+      "lat": 31.245688,
+      "lon": 121.527338,
+      "name": "澜川大道 × 东港路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-2-7",
+      "x": 5950,
+      "y": 1700,
+      "lat": 31.245688,
+      "lon": 121.536278,
+      "name": "澜川大道 × 临江路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-3-0",
+      "x": 0,
+      "y": 2550,
+      "lat": 31.253333,
+      "lon": 121.4737,
+      "name": "栖霞路 × 西林路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-3-1",
+      "x": 850,
+      "y": 2550,
+      "lat": 31.253333,
+      "lon": 121.48264,
+      "name": "栖霞路 × 松涛路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-3-2",
+      "x": 1700,
+      "y": 2550,
+      "lat": 31.253333,
+      "lon": 121.491579,
+      "name": "栖霞路 × 白鹭街",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-3-3",
+      "x": 2550,
+      "y": 2550,
+      "lat": 31.253333,
+      "lon": 121.500519,
+      "name": "栖霞路 × 云影路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-3-4",
+      "x": 3400,
+      "y": 2550,
+      "lat": 31.253333,
+      "lon": 121.509459,
+      "name": "栖霞路 × 长宁路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-3-5",
+      "x": 4250,
+      "y": 2550,
+      "lat": 31.253333,
+      "lon": 121.518398,
+      "name": "栖霞路 × 澜川大道",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-3-6",
+      "x": 5100,
+      "y": 2550,
+      "lat": 31.253333,
+      "lon": 121.527338,
+      "name": "栖霞路 × 东港路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-3-7",
+      "x": 5950,
+      "y": 2550,
+      "lat": 31.253333,
+      "lon": 121.536278,
+      "name": "栖霞路 × 临江路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-4-0",
+      "x": 0,
+      "y": 3400,
+      "lat": 31.260977,
+      "lon": 121.4737,
+      "name": "中央公园道 × 西林路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-4-1",
+      "x": 850,
+      "y": 3400,
+      "lat": 31.260977,
+      "lon": 121.48264,
+      "name": "中央公园道 × 松涛路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-4-2",
+      "x": 1700,
+      "y": 3400,
+      "lat": 31.260977,
+      "lon": 121.491579,
+      "name": "中央公园道 × 白鹭街",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-4-3",
+      "x": 2550,
+      "y": 3400,
+      "lat": 31.260977,
+      "lon": 121.500519,
+      "name": "中央公园道 × 云影路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-4-5",
+      "x": 4250,
+      "y": 3400,
+      "lat": 31.260977,
+      "lon": 121.518398,
+      "name": "中央公园道 × 澜川大道",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-4-6",
+      "x": 5100,
+      "y": 3400,
+      "lat": 31.260977,
+      "lon": 121.527338,
+      "name": "中央公园道 × 东港路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-4-7",
+      "x": 5950,
+      "y": 3400,
+      "lat": 31.260977,
+      "lon": 121.536278,
+      "name": "中央公园道 × 临江路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-5-0",
+      "x": 0,
+      "y": 4250,
+      "lat": 31.268621,
+      "lon": 121.4737,
+      "name": "南塘路 × 西林路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-5-1",
+      "x": 850,
+      "y": 4250,
+      "lat": 31.268621,
+      "lon": 121.48264,
+      "name": "南塘路 × 松涛路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-5-2",
+      "x": 1700,
+      "y": 4250,
+      "lat": 31.268621,
+      "lon": 121.491579,
+      "name": "南塘路 × 白鹭街",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-5-3",
+      "x": 2550,
+      "y": 4250,
+      "lat": 31.268621,
+      "lon": 121.500519,
+      "name": "南塘路 × 云影路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-5-4",
+      "x": 3400,
+      "y": 4250,
+      "lat": 31.268621,
+      "lon": 121.509459,
+      "name": "南塘路 × 长宁路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-5-5",
+      "x": 4250,
+      "y": 4250,
+      "lat": 31.268621,
+      "lon": 121.518398,
+      "name": "南塘路 × 澜川大道",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-5-6",
+      "x": 5100,
+      "y": 4250,
+      "lat": 31.268621,
+      "lon": 121.527338,
+      "name": "南塘路 × 东港路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-5-7",
+      "x": 5950,
+      "y": 4250,
+      "lat": 31.268621,
+      "lon": 121.536278,
+      "name": "南塘路 × 临江路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-6-0",
+      "x": 0,
+      "y": 5100,
+      "lat": 31.276265,
+      "lon": 121.4737,
+      "name": "望江路 × 西林路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-6-1",
+      "x": 850,
+      "y": 5100,
+      "lat": 31.276265,
+      "lon": 121.48264,
+      "name": "望江路 × 松涛路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-6-2",
+      "x": 1700,
+      "y": 5100,
+      "lat": 31.276265,
+      "lon": 121.491579,
+      "name": "望江路 × 白鹭街",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-6-3",
+      "x": 2550,
+      "y": 5100,
+      "lat": 31.276265,
+      "lon": 121.500519,
+      "name": "望江路 × 云影路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-6-4",
+      "x": 3400,
+      "y": 5100,
+      "lat": 31.276265,
+      "lon": 121.509459,
+      "name": "望江路 × 长宁路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-6-5",
+      "x": 4250,
+      "y": 5100,
+      "lat": 31.276265,
+      "lon": 121.518398,
+      "name": "望江路 × 澜川大道",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-6-6",
+      "x": 5100,
+      "y": 5100,
+      "lat": 31.276265,
+      "lon": 121.527338,
+      "name": "望江路 × 东港路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-6-7",
+      "x": 5950,
+      "y": 5100,
+      "lat": 31.276265,
+      "lon": 121.536278,
+      "name": "望江路 × 临江路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-7-0",
+      "x": 0,
+      "y": 5950,
+      "lat": 31.28391,
+      "lon": 121.4737,
+      "name": "环城南路 × 西林路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-7-1",
+      "x": 850,
+      "y": 5950,
+      "lat": 31.28391,
+      "lon": 121.48264,
+      "name": "环城南路 × 松涛路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-7-2",
+      "x": 1700,
+      "y": 5950,
+      "lat": 31.28391,
+      "lon": 121.491579,
+      "name": "环城南路 × 白鹭街",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-7-3",
+      "x": 2550,
+      "y": 5950,
+      "lat": 31.28391,
+      "lon": 121.500519,
+      "name": "环城南路 × 云影路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-7-4",
+      "x": 3400,
+      "y": 5950,
+      "lat": 31.28391,
+      "lon": 121.509459,
+      "name": "环城南路 × 长宁路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-7-5",
+      "x": 4250,
+      "y": 5950,
+      "lat": 31.28391,
+      "lon": 121.518398,
+      "name": "环城南路 × 澜川大道",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-7-6",
+      "x": 5100,
+      "y": 5950,
+      "lat": 31.28391,
+      "lon": 121.527338,
+      "name": "环城南路 × 东港路",
+      "kind": "intersection"
+    },
+    {
+      "id": "n-7-7",
+      "x": 5950,
+      "y": 5950,
+      "lat": 31.28391,
+      "lon": 121.536278,
+      "name": "环城南路 × 临江路",
+      "kind": "intersection"
+    }
+  ],
+  "edges": [
+    {
+      "from": "n-0-0",
+      "to": "n-0-1",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "北环路"
+    },
+    {
+      "from": "n-0-1",
+      "to": "n-0-2",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "北环路"
+    },
+    {
+      "from": "n-0-2",
+      "to": "n-0-3",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "北环路"
+    },
+    {
+      "from": "n-0-3",
+      "to": "n-0-4",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "北环路"
+    },
+    {
+      "from": "n-0-4",
+      "to": "n-0-5",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "北环路"
+    },
+    {
+      "from": "n-0-6",
+      "to": "n-0-7",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "北环路"
+    },
+    {
+      "from": "n-1-0",
+      "to": "n-1-1",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "云杉路"
+    },
+    {
+      "from": "n-1-1",
+      "to": "n-1-2",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "云杉路"
+    },
+    {
+      "from": "n-1-2",
+      "to": "n-1-3",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "云杉路"
+    },
+    {
+      "from": "n-1-3",
+      "to": "n-1-4",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "云杉路"
+    },
+    {
+      "from": "n-1-4",
+      "to": "n-1-5",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "云杉路"
+    },
+    {
+      "from": "n-1-5",
+      "to": "n-1-6",
+      "distanceM": 850,
+      "speedKmh": 32,
+      "class": "bridge",
+      "oneway": false,
+      "name": "云杉路澜川大桥"
+    },
+    {
+      "from": "n-1-6",
+      "to": "n-1-7",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "云杉路"
+    },
+    {
+      "from": "n-2-0",
+      "to": "n-2-1",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-2-1",
+      "to": "n-2-2",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-2-2",
+      "to": "n-2-3",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-2-3",
+      "to": "n-2-4",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-2-4",
+      "to": "n-2-5",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-2-6",
+      "to": "n-2-7",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-3-0",
+      "to": "n-3-1",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "栖霞路"
+    },
+    {
+      "from": "n-3-1",
+      "to": "n-3-2",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "栖霞路"
+    },
+    {
+      "from": "n-3-2",
+      "to": "n-3-3",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "栖霞路"
+    },
+    {
+      "from": "n-3-3",
+      "to": "n-3-4",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "栖霞路"
+    },
+    {
+      "from": "n-3-4",
+      "to": "n-3-5",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "栖霞路"
+    },
+    {
+      "from": "n-3-6",
+      "to": "n-3-7",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "栖霞路"
+    },
+    {
+      "from": "n-4-0",
+      "to": "n-4-1",
+      "distanceM": 850,
+      "speedKmh": 60,
+      "class": "expressway",
+      "oneway": false,
+      "name": "中央公园道"
+    },
+    {
+      "from": "n-4-1",
+      "to": "n-4-2",
+      "distanceM": 850,
+      "speedKmh": 60,
+      "class": "expressway",
+      "oneway": false,
+      "name": "中央公园道"
+    },
+    {
+      "from": "n-4-2",
+      "to": "n-4-3",
+      "distanceM": 850,
+      "speedKmh": 60,
+      "class": "expressway",
+      "oneway": false,
+      "name": "中央公园道"
+    },
+    {
+      "from": "n-4-5",
+      "to": "n-4-6",
+      "distanceM": 850,
+      "speedKmh": 32,
+      "class": "bridge",
+      "oneway": false,
+      "name": "中央公园道澜川大桥"
+    },
+    {
+      "from": "n-4-6",
+      "to": "n-4-7",
+      "distanceM": 850,
+      "speedKmh": 60,
+      "class": "expressway",
+      "oneway": false,
+      "name": "中央公园道"
+    },
+    {
+      "from": "n-5-0",
+      "to": "n-5-1",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "南塘路"
+    },
+    {
+      "from": "n-5-1",
+      "to": "n-5-2",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "南塘路"
+    },
+    {
+      "from": "n-5-2",
+      "to": "n-5-3",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "南塘路"
+    },
+    {
+      "from": "n-5-3",
+      "to": "n-5-4",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "南塘路"
+    },
+    {
+      "from": "n-5-4",
+      "to": "n-5-5",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "南塘路"
+    },
+    {
+      "from": "n-5-6",
+      "to": "n-5-7",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "南塘路"
+    },
+    {
+      "from": "n-6-0",
+      "to": "n-6-1",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "望江路"
+    },
+    {
+      "from": "n-6-1",
+      "to": "n-6-2",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "望江路"
+    },
+    {
+      "from": "n-6-2",
+      "to": "n-6-3",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "望江路"
+    },
+    {
+      "from": "n-6-3",
+      "to": "n-6-4",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "望江路"
+    },
+    {
+      "from": "n-6-4",
+      "to": "n-6-5",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "望江路"
+    },
+    {
+      "from": "n-6-6",
+      "to": "n-6-7",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "望江路"
+    },
+    {
+      "from": "n-7-0",
+      "to": "n-7-1",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "环城南路"
+    },
+    {
+      "from": "n-7-1",
+      "to": "n-7-2",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "环城南路"
+    },
+    {
+      "from": "n-7-2",
+      "to": "n-7-3",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "环城南路"
+    },
+    {
+      "from": "n-7-3",
+      "to": "n-7-4",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "环城南路"
+    },
+    {
+      "from": "n-7-4",
+      "to": "n-7-5",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "环城南路"
+    },
+    {
+      "from": "n-7-5",
+      "to": "n-7-6",
+      "distanceM": 850,
+      "speedKmh": 32,
+      "class": "bridge",
+      "oneway": false,
+      "name": "环城南路澜川大桥"
+    },
+    {
+      "from": "n-7-6",
+      "to": "n-7-7",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "环城南路"
+    },
+    {
+      "from": "n-0-0",
+      "to": "n-1-0",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "西林路"
+    },
+    {
+      "from": "n-0-1",
+      "to": "n-1-1",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "松涛路"
+    },
+    {
+      "from": "n-0-2",
+      "to": "n-1-2",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "白鹭街"
+    },
+    {
+      "from": "n-0-3",
+      "to": "n-1-3",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "云影路"
+    },
+    {
+      "from": "n-0-4",
+      "to": "n-1-4",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "长宁路"
+    },
+    {
+      "from": "n-0-5",
+      "to": "n-1-5",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-0-6",
+      "to": "n-1-6",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "东港路"
+    },
+    {
+      "from": "n-0-7",
+      "to": "n-1-7",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "临江路"
+    },
+    {
+      "from": "n-1-0",
+      "to": "n-2-0",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "西林路"
+    },
+    {
+      "from": "n-1-1",
+      "to": "n-2-1",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "松涛路"
+    },
+    {
+      "from": "n-1-2",
+      "to": "n-2-2",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "白鹭街"
+    },
+    {
+      "from": "n-1-3",
+      "to": "n-2-3",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "云影路"
+    },
+    {
+      "from": "n-1-4",
+      "to": "n-2-4",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "长宁路"
+    },
+    {
+      "from": "n-1-5",
+      "to": "n-2-5",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-1-6",
+      "to": "n-2-6",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "东港路"
+    },
+    {
+      "from": "n-1-7",
+      "to": "n-2-7",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "临江路"
+    },
+    {
+      "from": "n-2-0",
+      "to": "n-3-0",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "西林路"
+    },
+    {
+      "from": "n-2-1",
+      "to": "n-3-1",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "松涛路"
+    },
+    {
+      "from": "n-2-2",
+      "to": "n-3-2",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "白鹭街"
+    },
+    {
+      "from": "n-2-3",
+      "to": "n-3-3",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "云影路"
+    },
+    {
+      "from": "n-2-4",
+      "to": "n-3-4",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "长宁路"
+    },
+    {
+      "from": "n-2-5",
+      "to": "n-3-5",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-2-6",
+      "to": "n-3-6",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "东港路"
+    },
+    {
+      "from": "n-2-7",
+      "to": "n-3-7",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "临江路"
+    },
+    {
+      "from": "n-3-0",
+      "to": "n-4-0",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "西林路"
+    },
+    {
+      "from": "n-3-1",
+      "to": "n-4-1",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "松涛路"
+    },
+    {
+      "from": "n-3-2",
+      "to": "n-4-2",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "白鹭街"
+    },
+    {
+      "from": "n-3-3",
+      "to": "n-4-3",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "云影路"
+    },
+    {
+      "from": "n-3-5",
+      "to": "n-4-5",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-3-6",
+      "to": "n-4-6",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "东港路"
+    },
+    {
+      "from": "n-3-7",
+      "to": "n-4-7",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "临江路"
+    },
+    {
+      "from": "n-4-0",
+      "to": "n-5-0",
+      "distanceM": 850,
+      "speedKmh": 60,
+      "class": "expressway",
+      "oneway": false,
+      "name": "西林路"
+    },
+    {
+      "from": "n-4-1",
+      "to": "n-5-1",
+      "distanceM": 850,
+      "speedKmh": 60,
+      "class": "expressway",
+      "oneway": false,
+      "name": "松涛路"
+    },
+    {
+      "from": "n-4-2",
+      "to": "n-5-2",
+      "distanceM": 850,
+      "speedKmh": 60,
+      "class": "expressway",
+      "oneway": false,
+      "name": "白鹭街"
+    },
+    {
+      "from": "n-4-3",
+      "to": "n-5-3",
+      "distanceM": 850,
+      "speedKmh": 60,
+      "class": "expressway",
+      "oneway": false,
+      "name": "云影路"
+    },
+    {
+      "from": "n-4-5",
+      "to": "n-5-5",
+      "distanceM": 850,
+      "speedKmh": 60,
+      "class": "expressway",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-4-6",
+      "to": "n-5-6",
+      "distanceM": 850,
+      "speedKmh": 60,
+      "class": "expressway",
+      "oneway": false,
+      "name": "东港路"
+    },
+    {
+      "from": "n-4-7",
+      "to": "n-5-7",
+      "distanceM": 850,
+      "speedKmh": 60,
+      "class": "expressway",
+      "oneway": false,
+      "name": "临江路"
+    },
+    {
+      "from": "n-5-0",
+      "to": "n-6-0",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "西林路"
+    },
+    {
+      "from": "n-5-1",
+      "to": "n-6-1",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "松涛路"
+    },
+    {
+      "from": "n-5-2",
+      "to": "n-6-2",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "白鹭街"
+    },
+    {
+      "from": "n-5-3",
+      "to": "n-6-3",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "云影路"
+    },
+    {
+      "from": "n-5-4",
+      "to": "n-6-4",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "长宁路"
+    },
+    {
+      "from": "n-5-5",
+      "to": "n-6-5",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-5-6",
+      "to": "n-6-6",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "东港路"
+    },
+    {
+      "from": "n-5-7",
+      "to": "n-6-7",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "临江路"
+    },
+    {
+      "from": "n-6-0",
+      "to": "n-7-0",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "西林路"
+    },
+    {
+      "from": "n-6-1",
+      "to": "n-7-1",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "松涛路"
+    },
+    {
+      "from": "n-6-2",
+      "to": "n-7-2",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "白鹭街"
+    },
+    {
+      "from": "n-6-3",
+      "to": "n-7-3",
+      "distanceM": 850,
+      "speedKmh": 42,
+      "class": "arterial",
+      "oneway": false,
+      "name": "云影路"
+    },
+    {
+      "from": "n-6-4",
+      "to": "n-7-4",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "长宁路"
+    },
+    {
+      "from": "n-6-5",
+      "to": "n-7-5",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "澜川大道"
+    },
+    {
+      "from": "n-6-6",
+      "to": "n-7-6",
+      "distanceM": 850,
+      "speedKmh": 28,
+      "class": "street",
+      "oneway": false,
+      "name": "东港路"
+    },
+    {
+      "from": "n-6-7",
+      "to": "n-7-7",
+      "distanceM": 850,
+      "speedKmh": 50,
+      "class": "ring",
+      "oneway": false,
+      "name": "临江路"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>云澜选址实验室 · 合成城市试点</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <h1>云澜选址实验室</h1>
+        <p>合成城市 · 路网距离 · 容量与重叠 · 可复现回测</p>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <span class="pill" id="version-pill" title="当前输入版本组合">版本 …</span>
+      <span class="pill ghost" id="city-pill">虚构数据</span>
+      <button class="btn ghost" id="reload-data" type="button">刷新</button>
+    </div>
+  </header>
+
+  <div class="banner" role="note">
+    所有需求、路网、门店、候选点与营业历史均为程序生成的虚构数据。本工具不调用商业地图、路径规划或真实交易系统，输出为到访人次口径的方案比较，<strong>不是收入或成功率预测</strong>。
+  </div>
+
+  <main class="layout">
+    <aside class="panel left">
+      <section class="block">
+        <div class="block-head">
+          <h2>① 任务与输入版本</h2>
+          <button class="btn small ghost" data-goto="backtest">回测</button>
+        </div>
+        <div id="version-card" class="version-card"></div>
+        <div class="revision-grid" id="revision-presets"></div>
+        <p class="hint" id="revision-hint">修订输入会产生新的内容版本；旧方案和旧回测将被标记为过期，不会自动采用新数据。</p>
+      </section>
+
+      <section class="block">
+        <div class="block-head">
+          <h2>② 候选点位</h2>
+          <span class="counter" id="selected-count">0 个已选</span>
+        </div>
+        <div class="filters">
+          <select id="district-filter" aria-label="片区筛选"></select>
+          <select id="sort-filter" aria-label="排序">
+            <option value="name">按名称</option>
+            <option value="rent">按租金</option>
+            <option value="capacity">按容量</option>
+            <option value="district">按片区</option>
+          </select>
+        </div>
+        <div class="candidate-list" id="candidate-list"></div>
+      </section>
+
+      <section class="block">
+        <div class="block-head">
+          <h2>③ 目标权重</h2>
+        </div>
+        <label class="slider-row">
+          <span>覆盖更多需求 <b id="w-coverage-label">60%</b></span>
+          <input type="range" id="w-coverage" min="0" max="100" value="60" />
+        </label>
+        <label class="slider-row">
+          <span>减少重叠服务 <b id="w-overlap-label">40%</b></span>
+          <input type="range" id="w-overlap" min="0" max="100" value="40" />
+        </label>
+        <div class="inline-row">
+          <label>开店数
+            <select id="k-select"><option>1</option><option selected>2</option><option>3</option></select>
+          </label>
+          <label>对照期
+            <select id="period-select"></select>
+          </label>
+        </div>
+        <button class="btn primary wide" id="run-optimize" type="button">搜索候选组合</button>
+        <p class="hint">权重只用于在 Pareto 前沿上挑一个推荐；前沿本身展示真实的覆盖—重叠取舍。</p>
+      </section>
+    </aside>
+
+    <section class="map-column">
+      <div class="map-toolbar">
+        <div class="segmented" role="group" aria-label="地图图层">
+          <button class="seg active" data-layer="overlap">重叠热度</button>
+          <button class="seg" data-layer="access">可达圈层</button>
+          <button class="seg" data-layer="cannibal">现有店分流</button>
+        </div>
+        <div class="map-legend" id="map-legend"></div>
+        <button class="btn small ghost" id="reset-view" type="button">重置视图</button>
+      </div>
+      <div class="map-wrap" id="map-wrap">
+        <svg id="map" viewBox="0 0 6000 6000" role="img" aria-label="合成城市地图"></svg>
+        <div class="map-tooltip" id="map-tooltip" hidden></div>
+        <div class="map-empty" id="map-empty" hidden></div>
+      </div>
+      <div class="map-footer">
+        <span id="map-caption">路网按行程时间着色；拖动候选标记可调整坐标。</span>
+        <span id="map-scale">网格间距 850 m</span>
+      </div>
+    </section>
+
+    <aside class="panel right">
+      <nav class="tabs" role="tablist">
+        <button class="tab active" data-tab="scenario" role="tab">当前方案</button>
+        <button class="tab" data-tab="optimize" role="tab">组合与前沿</button>
+        <button class="tab" data-tab="backtest" role="tab">回测与检验</button>
+        <button class="tab" data-tab="tasks" role="tab">任务 <span class="badge" id="task-badge" hidden>0</span></button>
+      </nav>
+
+      <div class="tab-body active" id="tab-scenario">
+        <div class="scenario-head">
+          <div>
+            <h2 id="scenario-title">未选候选</h2>
+            <p class="hint" id="scenario-subtitle">在左侧勾选候选点，或从组合搜索中载入方案。</p>
+          </div>
+          <div class="row-actions">
+            <button class="btn small ghost" id="revert-placement" type="button" hidden>撤销拖动</button>
+            <button class="btn small primary" id="save-scenario" type="button">保存方案</button>
+          </div>
+        </div>
+        <div id="scenario-empty" class="empty-state">
+          <p>尚未选择候选点。</p>
+          <p class="hint">可先运行“搜索候选组合”，或直接勾选。现有 4 家营业门店已计入基线。</p>
+        </div>
+        <div id="scenario-result" hidden>
+          <div class="kpi-grid" id="kpi-grid"></div>
+          <div class="callout" id="impact-callout"></div>
+          <div class="section-title">新店与分流</div>
+          <table class="data-table compact" id="store-table"></table>
+          <div class="section-title">新店之间的期望重叠</div>
+          <div id="overlap-pairs" class="overlap-list"></div>
+          <div class="section-title">不确定性区间</div>
+          <div id="uncertainty-card"></div>
+          <div class="section-title">提示</div>
+          <ul class="warnings" id="scenario-warnings"></ul>
+        </div>
+      </div>
+
+      <div class="tab-body" id="tab-optimize">
+        <div class="section-title first">推荐组合 <span class="hint-inline" id="opt-search-note"></span></div>
+        <div id="opt-result" class="empty-state"><p>尚未运行组合搜索。</p></div>
+      </div>
+
+      <div class="tab-body" id="tab-backtest">
+        <div id="backtest-fresh-note"></div>
+        <div class="row-actions end">
+          <button class="btn small primary" id="run-backtest" type="button">运行隔离回测</button>
+        </div>
+        <div id="backtest-content" class="empty-state"><p>尚无回测报告。</p></div>
+      </div>
+
+      <div class="tab-body" id="tab-tasks">
+        <p class="hint">任务保存在本地，刷新页面或重启服务后可继续查看；中断的搜索可一键重新排队。</p>
+        <div id="task-list" class="task-list"></div>
+      </div>
+    </aside>
+  </main>
+
+  <div class="compare-bar" id="compare-bar" hidden>
+    <strong>方案对比</strong>
+    <div class="compare-chips" id="compare-chips"></div>
+    <button class="btn small ghost" id="clear-compare" type="button">清空</button>
+  </div>
+
+  <section class="bottom">
+    <div class="bottom-head">
+      <h2>已保存方案</h2>
+      <p class="hint" id="saved-hint">每条方案固定记录其输入版本；数据修订后会显示“过期”，需重算才能采用新输入。</p>
+    </div>
+    <div class="scenario-grid" id="scenario-grid"></div>
+  </section>
+
+  <footer class="foot">
+    <span>本地单机演示 · 无外部地图/交易接口</span>
+    <span id="foot-versions"></span>
+  </footer>
+
+  <div class="toast" id="toast" hidden></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
